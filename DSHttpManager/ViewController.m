@@ -2,7 +2,7 @@
 //  ViewController.m
 //  DSHttpManager
 //
-//  Created by 石冬冬 on 2017/7/14.
+//  Created by Derrick on 2017/7/14.
 //  Copyright © 2017年 Derrick. All rights reserved.
 //
 
@@ -22,6 +22,19 @@ static NSString * const url5 = @"http://chanyouji.com/api/users/likes/268717.jso
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [DSHttpManagerInstance startNetworkMonitoringWithBlock:^(DSNetworkStatus status) {
+        switch (status) {
+            case DSNetworkStatusReachableViaWiFi:
+                NSLog(@"wifi");
+                break;
+            case DSNetworkStatusReachableViaWWAN:
+                NSLog(@"3G");
+                break;
+            default:
+                break;
+        }
+    }];
    
 }
 

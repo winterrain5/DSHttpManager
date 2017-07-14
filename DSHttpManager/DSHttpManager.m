@@ -2,7 +2,7 @@
 //  DSHttpManager.m
 //  DSHttpManager
 //
-//  Created by 石冬冬 on 2017/7/14.
+//  Created by Derrick on 2017/7/14.
 //  Copyright © 2017年 Derrick. All rights reserved.
 //
 
@@ -12,17 +12,6 @@
 
 #import <AFNetworking.h>
 #import <AFNetworkActivityIndicatorManager.h>
-
-#import <AVFoundation/AVAsset.h>
-#import <AVFoundation/AVAssetExportSession.h>
-#import <AVFoundation/AVMediaFormat.h>
-
-/*! 系统相册 */
-#import <AssetsLibrary/ALAsset.h>
-#import <AssetsLibrary/ALAssetsLibrary.h>
-#import <AssetsLibrary/ALAssetsGroup.h>
-#import <AssetsLibrary/ALAssetRepresentation.h>
-
 
 static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.operation.lock";
 
@@ -174,6 +163,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
             cache(cacheResponse);
         }
     }
+    
     switch (type) {
         case DSHttpRequestTypeGet:
         {
