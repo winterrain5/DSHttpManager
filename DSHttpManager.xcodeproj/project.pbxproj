@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		259D90281F18950D00CFE665 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D90271F18950D00CFE665 /* main.m */; };
+		259D902B1F18950D00CFE665 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D902A1F18950D00CFE665 /* AppDelegate.m */; };
+		259D902E1F18950D00CFE665 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D902D1F18950D00CFE665 /* ViewController.m */; };
+		259D90311F18950D00CFE665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259D902F1F18950D00CFE665 /* Main.storyboard */; };
+		259D90331F18950D00CFE665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259D90321F18950D00CFE665 /* Assets.xcassets */; };
+		259D90361F18950D00CFE665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259D90341F18950D00CFE665 /* LaunchScreen.storyboard */; };
+		259D90411F18950E00CFE665 /* DSHttpManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D90401F18950E00CFE665 /* DSHttpManagerTests.m */; };
+		259D904C1F18950E00CFE665 /* DSHttpManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D904B1F18950E00CFE665 /* DSHttpManagerUITests.m */; };
+		259D905C1F18968900CFE665 /* DSHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D905B1F18968900CFE665 /* DSHttpManager.m */; };
+		259D905F1F1896A800CFE665 /* DSHttpCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D905E1F1896A800CFE665 /* DSHttpCache.m */; };
+		259D90691F18A0A800CFE665 /* DSHttpConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 259D90681F18A0A800CFE665 /* DSHttpConstant.m */; };
+		60625B50E32AEC7545182486 /* libPods-DSHttpManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 107A26A0E73B014326955B70 /* libPods-DSHttpManager.a */; };
+		D6F97830EB6A9A1ADE6828A7 /* libPods-DSHttpManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4B5D62FE92B13B5192A70E /* libPods-DSHttpManagerTests.a */; };
+		F9D681D6EC33E2EDCB845538 /* libPods-DSHttpManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF30E9E56B0D092A5D243BD /* libPods-DSHttpManagerUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		259D903D1F18950E00CFE665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 259D901B1F18950D00CFE665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 259D90221F18950D00CFE665;
+			remoteInfo = DSHttpManager;
+		};
+		259D90481F18950E00CFE665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 259D901B1F18950D00CFE665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 259D90221F18950D00CFE665;
+			remoteInfo = DSHttpManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F184237775D78E603C398A /* Pods-DSHttpManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSHttpManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSHttpManager/Pods-DSHttpManager.debug.xcconfig"; sourceTree = "<group>"; };
+		107A26A0E73B014326955B70 /* libPods-DSHttpManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DSHttpManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		259D90231F18950D00CFE665 /* DSHttpManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSHttpManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		259D90271F18950D00CFE665 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		259D90291F18950D00CFE665 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		259D902A1F18950D00CFE665 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		259D902C1F18950D00CFE665 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		259D902D1F18950D00CFE665 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		259D90301F18950D00CFE665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		259D90321F18950D00CFE665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		259D90351F18950D00CFE665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		259D90371F18950D00CFE665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259D903C1F18950E00CFE665 /* DSHttpManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSHttpManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		259D90401F18950E00CFE665 /* DSHttpManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSHttpManagerTests.m; sourceTree = "<group>"; };
+		259D90421F18950E00CFE665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259D90471F18950E00CFE665 /* DSHttpManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSHttpManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		259D904B1F18950E00CFE665 /* DSHttpManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSHttpManagerUITests.m; sourceTree = "<group>"; };
+		259D904D1F18950E00CFE665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259D905A1F18968900CFE665 /* DSHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHttpManager.h; sourceTree = "<group>"; };
+		259D905B1F18968900CFE665 /* DSHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHttpManager.m; sourceTree = "<group>"; };
+		259D905D1F1896A800CFE665 /* DSHttpCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHttpCache.h; sourceTree = "<group>"; };
+		259D905E1F1896A800CFE665 /* DSHttpCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHttpCache.m; sourceTree = "<group>"; };
+		259D90661F18979E00CFE665 /* DSHttpManagerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSHttpManagerKit.h; sourceTree = "<group>"; };
+		259D90671F18A0A800CFE665 /* DSHttpConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHttpConstant.h; sourceTree = "<group>"; };
+		259D90681F18A0A800CFE665 /* DSHttpConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHttpConstant.m; sourceTree = "<group>"; };
+		5B4B5D62FE92B13B5192A70E /* libPods-DSHttpManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DSHttpManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7104EE39F4BBDA59BA20D588 /* Pods-DSHttpManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSHttpManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSHttpManagerTests/Pods-DSHttpManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		92EF2B8FCCB1BB17E2D89F07 /* Pods-DSHttpManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSHttpManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSHttpManager/Pods-DSHttpManager.release.xcconfig"; sourceTree = "<group>"; };
+		9D25D282A1AD1A032E5AF987 /* Pods-DSHttpManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSHttpManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSHttpManagerTests/Pods-DSHttpManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6E161E5745111C51667EA0F /* Pods-DSHttpManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSHttpManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSHttpManagerUITests/Pods-DSHttpManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF30E9E56B0D092A5D243BD /* libPods-DSHttpManagerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DSHttpManagerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0FD345073099E65C9954647 /* Pods-DSHttpManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSHttpManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSHttpManagerUITests/Pods-DSHttpManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		259D90201F18950D00CFE665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60625B50E32AEC7545182486 /* libPods-DSHttpManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259D90391F18950E00CFE665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F97830EB6A9A1ADE6828A7 /* libPods-DSHttpManagerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259D90441F18950E00CFE665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9D681D6EC33E2EDCB845538 /* libPods-DSHttpManagerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		259D901A1F18950D00CFE665 = {
+			isa = PBXGroup;
+			children = (
+				259D90251F18950D00CFE665 /* DSHttpManager */,
+				259D903F1F18950E00CFE665 /* DSHttpManagerTests */,
+				259D904A1F18950E00CFE665 /* DSHttpManagerUITests */,
+				259D90241F18950D00CFE665 /* Products */,
+				85FA07B54FA2230F9B5EEFF6 /* Pods */,
+				2AECCD5BCDB4562AEFECBDE6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		259D90241F18950D00CFE665 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				259D90231F18950D00CFE665 /* DSHttpManager.app */,
+				259D903C1F18950E00CFE665 /* DSHttpManagerTests.xctest */,
+				259D90471F18950E00CFE665 /* DSHttpManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		259D90251F18950D00CFE665 /* DSHttpManager */ = {
+			isa = PBXGroup;
+			children = (
+				259D90591F1895C000CFE665 /* Manager */,
+				259D90291F18950D00CFE665 /* AppDelegate.h */,
+				259D902A1F18950D00CFE665 /* AppDelegate.m */,
+				259D902C1F18950D00CFE665 /* ViewController.h */,
+				259D902D1F18950D00CFE665 /* ViewController.m */,
+				259D902F1F18950D00CFE665 /* Main.storyboard */,
+				259D90321F18950D00CFE665 /* Assets.xcassets */,
+				259D90341F18950D00CFE665 /* LaunchScreen.storyboard */,
+				259D90371F18950D00CFE665 /* Info.plist */,
+				259D90261F18950D00CFE665 /* Supporting Files */,
+			);
+			path = DSHttpManager;
+			sourceTree = "<group>";
+		};
+		259D90261F18950D00CFE665 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				259D90271F18950D00CFE665 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		259D903F1F18950E00CFE665 /* DSHttpManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				259D90401F18950E00CFE665 /* DSHttpManagerTests.m */,
+				259D90421F18950E00CFE665 /* Info.plist */,
+			);
+			path = DSHttpManagerTests;
+			sourceTree = "<group>";
+		};
+		259D904A1F18950E00CFE665 /* DSHttpManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				259D904B1F18950E00CFE665 /* DSHttpManagerUITests.m */,
+				259D904D1F18950E00CFE665 /* Info.plist */,
+			);
+			path = DSHttpManagerUITests;
+			sourceTree = "<group>";
+		};
+		259D90591F1895C000CFE665 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				259D905A1F18968900CFE665 /* DSHttpManager.h */,
+				259D905B1F18968900CFE665 /* DSHttpManager.m */,
+				259D905D1F1896A800CFE665 /* DSHttpCache.h */,
+				259D905E1F1896A800CFE665 /* DSHttpCache.m */,
+				259D90661F18979E00CFE665 /* DSHttpManagerKit.h */,
+				259D90671F18A0A800CFE665 /* DSHttpConstant.h */,
+				259D90681F18A0A800CFE665 /* DSHttpConstant.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		2AECCD5BCDB4562AEFECBDE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				107A26A0E73B014326955B70 /* libPods-DSHttpManager.a */,
+				5B4B5D62FE92B13B5192A70E /* libPods-DSHttpManagerTests.a */,
+				CEF30E9E56B0D092A5D243BD /* libPods-DSHttpManagerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85FA07B54FA2230F9B5EEFF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05F184237775D78E603C398A /* Pods-DSHttpManager.debug.xcconfig */,
+				92EF2B8FCCB1BB17E2D89F07 /* Pods-DSHttpManager.release.xcconfig */,
+				7104EE39F4BBDA59BA20D588 /* Pods-DSHttpManagerTests.debug.xcconfig */,
+				9D25D282A1AD1A032E5AF987 /* Pods-DSHttpManagerTests.release.xcconfig */,
+				C6E161E5745111C51667EA0F /* Pods-DSHttpManagerUITests.debug.xcconfig */,
+				E0FD345073099E65C9954647 /* Pods-DSHttpManagerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		259D90221F18950D00CFE665 /* DSHttpManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259D90501F18950E00CFE665 /* Build configuration list for PBXNativeTarget "DSHttpManager" */;
+			buildPhases = (
+				B029B27F17A26CC7959E68C1 /* [CP] Check Pods Manifest.lock */,
+				259D901F1F18950D00CFE665 /* Sources */,
+				259D90201F18950D00CFE665 /* Frameworks */,
+				259D90211F18950D00CFE665 /* Resources */,
+				B3ACFDA4E17482C2DF7018BD /* [CP] Embed Pods Frameworks */,
+				A49714FE4C5ACF833D12F330 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSHttpManager;
+			productName = DSHttpManager;
+			productReference = 259D90231F18950D00CFE665 /* DSHttpManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		259D903B1F18950E00CFE665 /* DSHttpManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259D90531F18950E00CFE665 /* Build configuration list for PBXNativeTarget "DSHttpManagerTests" */;
+			buildPhases = (
+				53A0D1AB5A0DB909A63D1F8C /* [CP] Check Pods Manifest.lock */,
+				259D90381F18950E00CFE665 /* Sources */,
+				259D90391F18950E00CFE665 /* Frameworks */,
+				259D903A1F18950E00CFE665 /* Resources */,
+				2D9F22405282D57F1EF3A4B0 /* [CP] Embed Pods Frameworks */,
+				FE422AEA319A8888497B0180 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				259D903E1F18950E00CFE665 /* PBXTargetDependency */,
+			);
+			name = DSHttpManagerTests;
+			productName = DSHttpManagerTests;
+			productReference = 259D903C1F18950E00CFE665 /* DSHttpManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		259D90461F18950E00CFE665 /* DSHttpManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 259D90561F18950E00CFE665 /* Build configuration list for PBXNativeTarget "DSHttpManagerUITests" */;
+			buildPhases = (
+				180745B32526FD480ADA3CDC /* [CP] Check Pods Manifest.lock */,
+				259D90431F18950E00CFE665 /* Sources */,
+				259D90441F18950E00CFE665 /* Frameworks */,
+				259D90451F18950E00CFE665 /* Resources */,
+				C68D708FC7C801DFDFF6BCCD /* [CP] Embed Pods Frameworks */,
+				868F85380C93D0ACD5F450EE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				259D90491F18950E00CFE665 /* PBXTargetDependency */,
+			);
+			name = DSHttpManagerUITests;
+			productName = DSHttpManagerUITests;
+			productReference = 259D90471F18950E00CFE665 /* DSHttpManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		259D901B1F18950D00CFE665 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Derrick;
+				TargetAttributes = {
+					259D90221F18950D00CFE665 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					259D903B1F18950E00CFE665 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 259D90221F18950D00CFE665;
+					};
+					259D90461F18950E00CFE665 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 259D90221F18950D00CFE665;
+					};
+				};
+			};
+			buildConfigurationList = 259D901E1F18950D00CFE665 /* Build configuration list for PBXProject "DSHttpManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 259D901A1F18950D00CFE665;
+			productRefGroup = 259D90241F18950D00CFE665 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				259D90221F18950D00CFE665 /* DSHttpManager */,
+				259D903B1F18950E00CFE665 /* DSHttpManagerTests */,
+				259D90461F18950E00CFE665 /* DSHttpManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		259D90211F18950D00CFE665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259D90361F18950D00CFE665 /* LaunchScreen.storyboard in Resources */,
+				259D90331F18950D00CFE665 /* Assets.xcassets in Resources */,
+				259D90311F18950D00CFE665 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259D903A1F18950E00CFE665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259D90451F18950E00CFE665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		180745B32526FD480ADA3CDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2D9F22405282D57F1EF3A4B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSHttpManagerTests/Pods-DSHttpManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53A0D1AB5A0DB909A63D1F8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		868F85380C93D0ACD5F450EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSHttpManagerUITests/Pods-DSHttpManagerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A49714FE4C5ACF833D12F330 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSHttpManager/Pods-DSHttpManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B029B27F17A26CC7959E68C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3ACFDA4E17482C2DF7018BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSHttpManager/Pods-DSHttpManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68D708FC7C801DFDFF6BCCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSHttpManagerUITests/Pods-DSHttpManagerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE422AEA319A8888497B0180 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSHttpManagerTests/Pods-DSHttpManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		259D901F1F18950D00CFE665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259D90691F18A0A800CFE665 /* DSHttpConstant.m in Sources */,
+				259D905C1F18968900CFE665 /* DSHttpManager.m in Sources */,
+				259D902E1F18950D00CFE665 /* ViewController.m in Sources */,
+				259D905F1F1896A800CFE665 /* DSHttpCache.m in Sources */,
+				259D902B1F18950D00CFE665 /* AppDelegate.m in Sources */,
+				259D90281F18950D00CFE665 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259D90381F18950E00CFE665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259D90411F18950E00CFE665 /* DSHttpManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		259D90431F18950E00CFE665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259D904C1F18950E00CFE665 /* DSHttpManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		259D903E1F18950E00CFE665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 259D90221F18950D00CFE665 /* DSHttpManager */;
+			targetProxy = 259D903D1F18950E00CFE665 /* PBXContainerItemProxy */;
+		};
+		259D90491F18950E00CFE665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 259D90221F18950D00CFE665 /* DSHttpManager */;
+			targetProxy = 259D90481F18950E00CFE665 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		259D902F1F18950D00CFE665 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				259D90301F18950D00CFE665 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		259D90341F18950D00CFE665 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				259D90351F18950D00CFE665 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		259D904E1F18950E00CFE665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		259D904F1F18950E00CFE665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		259D90511F18950E00CFE665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05F184237775D78E603C398A /* Pods-DSHttpManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DSHttpManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrick.DSHttpManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		259D90521F18950E00CFE665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92EF2B8FCCB1BB17E2D89F07 /* Pods-DSHttpManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DSHttpManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrick.DSHttpManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		259D90541F18950E00CFE665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7104EE39F4BBDA59BA20D588 /* Pods-DSHttpManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DSHttpManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrick.DSHttpManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSHttpManager.app/DSHttpManager";
+			};
+			name = Debug;
+		};
+		259D90551F18950E00CFE665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D25D282A1AD1A032E5AF987 /* Pods-DSHttpManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DSHttpManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrick.DSHttpManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSHttpManager.app/DSHttpManager";
+			};
+			name = Release;
+		};
+		259D90571F18950E00CFE665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6E161E5745111C51667EA0F /* Pods-DSHttpManagerUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = DSHttpManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrick.DSHttpManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DSHttpManager;
+			};
+			name = Debug;
+		};
+		259D90581F18950E00CFE665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0FD345073099E65C9954647 /* Pods-DSHttpManagerUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = DSHttpManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrick.DSHttpManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DSHttpManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		259D901E1F18950D00CFE665 /* Build configuration list for PBXProject "DSHttpManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259D904E1F18950E00CFE665 /* Debug */,
+				259D904F1F18950E00CFE665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		259D90501F18950E00CFE665 /* Build configuration list for PBXNativeTarget "DSHttpManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259D90511F18950E00CFE665 /* Debug */,
+				259D90521F18950E00CFE665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		259D90531F18950E00CFE665 /* Build configuration list for PBXNativeTarget "DSHttpManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259D90541F18950E00CFE665 /* Debug */,
+				259D90551F18950E00CFE665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		259D90561F18950E00CFE665 /* Build configuration list for PBXNativeTarget "DSHttpManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				259D90571F18950E00CFE665 /* Debug */,
+				259D90581F18950E00CFE665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 259D901B1F18950D00CFE665 /* Project object */;
+}
