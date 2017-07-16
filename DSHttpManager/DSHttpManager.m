@@ -451,6 +451,12 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
     [self.manager.requestSerializer setValue:value forHTTPHeaderField:file];
 }
 
+
+- (void)setTimeOut:(NSTimeInterval)timeOut {
+    _timeOut = timeOut;
+    self.manager.requestSerializer.timeoutInterval = timeOut;
+}
+
 #pragma mark - private method
 - (NSString *)strUTF8Encoding:(NSString *)str
 {

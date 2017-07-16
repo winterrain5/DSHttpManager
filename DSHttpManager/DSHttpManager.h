@@ -37,13 +37,13 @@ typedef NS_ENUM(NSUInteger, DSNetworkStatus)
 };
 
 /// 请求成功block
-typedef void (^DSResponseSuccessBlock)(id response);
+typedef void (^DSResponseSuccessBlock)(id _Nullable response);
 
 /// 缓存数据
-typedef void (^DSCacheDataBlock)(id response);
+typedef void (^DSCacheDataBlock)(id _Nullable response);
 
 /// 请求失败block
-typedef void (^DSResponseFailBlock)(NSError *error);
+typedef void (^DSResponseFailBlock)(NSError * _Nullable error);
 
 /// 上传进度block
 typedef void (^DSUploadProgressBlock)(double progress);
@@ -55,9 +55,12 @@ typedef void (^DSNetworkStatusBlock)(DSNetworkStatus status);
 
 @interface DSHttpManager : NSObject
 
+/// 超时时间
+@property (nonatomic, assign) NSTimeInterval timeOut;
+
 
 /// 单例方法
-+ (instancetype) shareInstance;
++ (instancetype _Nullable ) shareInstance;
 
 #pragma mark - 请求方法
 /**
