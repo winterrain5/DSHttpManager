@@ -153,14 +153,17 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
     NSString *url = [NSString stringWithFormat:@"%@%@",API_HOST,str];
     
     NSURLSessionTask *sessionTask = nil;
-    // 读取缓存
-    id cacheData = [DSHttpCache ds_httpCacheWithUrlString:url parameters:parameters];
     
-    if (isNeedCache &&  cacheData != nil) {
-        NSError *error;
-        id cacheResponse = [NSJSONSerialization JSONObjectWithData:cacheData options:NSJSONReadingMutableContainers error:&error];
-        if (cache && !error) {
-            cache(cacheResponse);
+    
+    if (isNeedCache) {
+        // 读取缓存
+        id cacheData = [DSHttpCache ds_httpCacheWithUrlString:url parameters:parameters];
+        if (cacheData != nil) {
+            NSError *error;
+            id cacheResponse = [NSJSONSerialization JSONObjectWithData:cacheData options:NSJSONReadingMutableContainers error:&error];
+            if (cache && !error) {
+                cache(cacheResponse);
+            }
         }
     }
     
@@ -441,6 +444,11 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
             }
         }];
     }
+}
+
+#pragma mark - 自定义请求头
+- (void)setHttpHeadValue:(NSString *)value forHeadFile:(NSString *)file {
+    [self.manager.requestSerializer setValue:value forHTTPHeaderField:file];
 }
 
 #pragma mark - private method

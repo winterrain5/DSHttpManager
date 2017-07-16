@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 #define DSHttpManagerInstance [DSHttpManager shareInstance]
 
 /**
@@ -67,12 +67,12 @@ typedef void (^DSNetworkStatusBlock)(DSNetworkStatus status);
  @param isNeedCache 是否需要缓存
  @param parameters 请求参数
  */
-- (void) getWithUrlString:(NSString *)urlString
+- (void) getWithUrlString:(NSString *_Nonnull)urlString
               isNeedCache:(BOOL)isNeedCache
-               parameters:(NSDictionary *)parameters
-                cacheData:(DSCacheDataBlock)cache
-                  success:(DSResponseSuccessBlock)success
-                  failure:(DSResponseFailBlock)failure;
+               parameters:(NSDictionary *_Nullable)parameters
+                cacheData:(DSCacheDataBlock _Nullable )cache
+                  success:(DSResponseSuccessBlock _Nullable )success
+                  failure:(DSResponseFailBlock _Nullable )failure;
 /**
  post请求
  
@@ -80,12 +80,12 @@ typedef void (^DSNetworkStatusBlock)(DSNetworkStatus status);
  @param isNeedCache 是否需要缓存
  @param parameters 请求参数
  */
-- (void) postWithUrlString:(NSString *)urlString
+- (void) postWithUrlString:(NSString *_Nonnull)urlString
               isNeedCache:(BOOL)isNeedCache
-               parameters:(NSDictionary *)parameters
-                 cacheData:(DSCacheDataBlock)cache
-                  success:(DSResponseSuccessBlock)success
-                  failure:(DSResponseFailBlock)failure;
+               parameters:(NSDictionary *_Nullable)parameters
+                 cacheData:(DSCacheDataBlock _Nullable )cache
+                  success:(DSResponseSuccessBlock _Nullable )success
+                  failure:(DSResponseFailBlock _Nullable )failure;
 
 /**
  上传图片(多图)
@@ -94,12 +94,12 @@ typedef void (^DSNetworkStatusBlock)(DSNetworkStatus status);
  @param parameters 请求参数
  @param images 图片数组
  */
-- (void) uploadImageWithUrlString:(NSString *)urlString
-                       parameters:(NSDictionary *)parameters
-                           images:(NSArray *)images
-                          success:(DSResponseSuccessBlock)success
-                          failure:(DSResponseFailBlock)failure
-                   uploadProgerss:(DSUploadProgressBlock)progress;
+- (void) uploadImageWithUrlString:(NSString *_Nonnull)urlString
+                       parameters:(NSDictionary *_Nullable)parameters
+                           images:(NSArray<UIImage *> *_Nonnull)images
+                          success:(DSResponseSuccessBlock _Nullable )success
+                          failure:(DSResponseFailBlock _Nullable )failure
+                   uploadProgerss:(DSUploadProgressBlock _Nullable )progress;
 
 /**
  上传视频
@@ -108,23 +108,23 @@ typedef void (^DSNetworkStatusBlock)(DSNetworkStatus status);
  @param parameters 请求参数
  @param videoPath 视频路径
  */
-- (void) uploadVideoWithUrlString:(NSString *)urlString
-                       parameters:(NSDictionary *)parameters
-                           videoPath:(NSString *)videoPath
-                          success:(DSResponseSuccessBlock)success
-                          failure:(DSResponseFailBlock)failure
-                   uploadProgerss:(DSUploadProgressBlock)progress;
+- (void) uploadVideoWithUrlString:(NSString *_Nonnull)urlString
+                       parameters:(NSDictionary *_Nullable)parameters
+                           videoPath:(NSString *_Nullable)videoPath
+                          success:(DSResponseSuccessBlock _Nullable )success
+                          failure:(DSResponseFailBlock _Nullable )failure
+                   uploadProgerss:(DSUploadProgressBlock _Nullable )progress;
 
 /**
  下载文件
  */
-- (void) downloadFileWihtUrlString:(NSString *)urlString
-                        parameters:(NSDictionary *)parameters
-                           path:(void (^)(NSString *path))path
-                          complete:(void (^)(NSData *data, NSError *error))complete progress:(void (^)(double progress))progress;
+- (void) downloadFileWihtUrlString:(NSString *_Nonnull)urlString
+                        parameters:(NSDictionary *_Nullable)parameters
+                           path:(void (^_Nullable)(NSString * _Nullable path))path
+                          complete:(void (^_Nullable)(NSData * _Nullable data, NSError * _Nullable error))complete progress:(void (^_Nullable)(double progress))progress;
 
 #pragma mark - 网络状态监测
-- (void) startNetworkMonitoringWithBlock:(DSNetworkStatusBlock)networkStatus;
+- (void) startNetworkMonitoringWithBlock:(DSNetworkStatusBlock _Nullable)networkStatus;
 
 #pragma mark - 取消 Http 请求
 /*!
@@ -135,5 +135,16 @@ typedef void (^DSNetworkStatusBlock)(DSNetworkStatus status);
 /*!
  *  取消指定 URL 的 Http 请求
  */
-- (void)cancelRequestWithURL:(NSString *)URL;
+- (void)cancelRequestWithURL:(NSString *_Nullable)URL;
+
+#pragma mark - 自定义请求头
+
+/**
+ 自定义请求头
+
+ @param value value
+ @param file key
+ */
+- (void)setHttpHeadValue:(NSString *_Nullable)value forHeadFile:(NSString *_Nullable)file;
+
 @end
