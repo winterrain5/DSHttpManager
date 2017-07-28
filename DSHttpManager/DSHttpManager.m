@@ -87,7 +87,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
         securityPolicy.allowInvalidCertificates = YES;
         securityPolicy.validatesDomainName = NO;
-        DSHttpManagerInstance.manager.securityPolicy = securityPolicy;
+        HttpManager.manager.securityPolicy = securityPolicy;
     } else {
         /// 自定义的CA证书配置如下
         // 使用证书验证模式
@@ -97,7 +97,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
         // 是否需要验证域名，默认为YES
         //    securityPolicy.pinnedCertificates = [[NSSet alloc] initWithObjects:cerData, nil];
         
-        DSHttpManagerInstance.manager.securityPolicy = securityPolicy;
+        HttpManager.manager.securityPolicy = securityPolicy;
         
         /*! 如果服务端使用的是正规CA签发的证书, 那么以下几行就可去掉: */
         //            NSSet <NSData *> *cerSet = [AFSecurityPolicy certificatesInBundle:[NSBundle mainBundle]];
@@ -114,7 +114,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
  @param isNeedCache 是否需要缓存
  @param parameters 请求参数
  */
-- (void) getWithUrlString:(NSString *)urlString
+- (void)getWithUrlString:(NSString *)urlString
               isNeedCache:(BOOL)isNeedCache
                parameters:(NSDictionary *)parameters
                 cacheData:(DSCacheDataBlock)cache
@@ -123,6 +123,11 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
     
     [self requestWithType:DSHttpRequestTypeGet UrlString:urlString isNeedCache:isNeedCache parameters:parameters cacheData:cache success:success failure:failure];
 }
+
+- (void)getWithUrlString:(NSString *)urlString parameters:(NSDictionary *)parameters success:(DSResponseSuccessBlock)success failure:(DSResponseFailBlock)failure {
+    
+    [self requestWithType:DSHttpRequestTypeGet UrlString:urlString isNeedCache:NO parameters:parameters cacheData:nil success:success failure:failure];
+}
 /**
  post请求
  
@@ -130,7 +135,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
  @param isNeedCache 是否需要缓存
  @param parameters 请求参数
  */
-- (void) postWithUrlString:(NSString *)urlString
+- (void)postWithUrlString:(NSString *)urlString
                isNeedCache:(BOOL)isNeedCache
                 parameters:(NSDictionary *)parameters
                  cacheData:(DSCacheDataBlock)cache
@@ -139,7 +144,11 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
      [self requestWithType:DSHttpRequestTypePost UrlString:urlString isNeedCache:isNeedCache parameters:parameters cacheData:cache success:success failure:failure];
 }
 
-- (void) requestWithType:(DSHttpRequestType)type
+- (void)postWithUrlString:(NSString *)urlString parameters:(NSDictionary *)parameters success:(DSResponseSuccessBlock)success failure:(DSResponseFailBlock)failure {
+    [self requestWithType:DSHttpRequestTypePost UrlString:urlString isNeedCache:NO parameters:parameters cacheData:nil success:success failure:failure];
+}
+
+- (void)requestWithType:(DSHttpRequestType)type
                UrlString:(NSString *)urlString
              isNeedCache:(BOOL)isNeedCache
               parameters:(NSDictionary *)parameters
@@ -235,7 +244,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
  @param parameters 请求参数
  @param images 图片数组
  */
-- (void) uploadImageWithUrlString:(NSString *)urlString
+- (void)uploadImageWithUrlString:(NSString *)urlString
                        parameters:(NSDictionary *)parameters
                            images:(NSArray *)images
                           success:(DSResponseSuccessBlock)success
@@ -289,7 +298,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
  @param parameters 请求参数
  @param videoPath 视频路径
  */
-- (void) uploadVideoWithUrlString:(NSString *)urlString
+- (void)uploadVideoWithUrlString:(NSString *)urlString
                        parameters:(NSDictionary *)parameters
                         videoPath:(NSString *)videoPath
                           success:(DSResponseSuccessBlock)success
@@ -335,7 +344,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
     
     
 }
-- (void) downloadFileWihtUrlString:(NSString *)urlString
+- (void)downloadFileWihtUrlString:(NSString *)urlString
                         parameters:(NSDictionary *)parameters
                               path:(void (^)(NSString *path))path
                           complete:(void (^)(NSData *data, NSError *error))complete progress:(void (^)(double progress))progress{
@@ -376,7 +385,7 @@ static NSString * const kAFNetworkingLockName = @"com.alamofire.networking.opera
 }
 
 #pragma mark - 网络状态监测
-- (void) startNetworkMonitoringWithBlock:(DSNetworkStatusBlock)networkStatus {
+- (void)startNetworkMonitoringWithBlock:(DSNetworkStatusBlock)networkStatus {
     /*! 1.获得网络监控的管理者 */
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
     /*! 当使用AF发送网络请求时,只要有网络操作,那么在状态栏(电池条)wifi符号旁边显示  菊花提示 */
